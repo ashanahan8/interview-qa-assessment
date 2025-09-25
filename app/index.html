@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Student Engagement Portal</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Engagement Portal</h1>
+    <div id="auth">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label>Email <input id="email" type="email" placeholder="student@example.edu"/></label>
+        <label>Password <input id="password" type="password" placeholder="min 6 chars"/></label>
+        <button type="submit">Sign In</button>
+        <p class="hint">Use any email and password &ge; 6 chars</p>
+      </form>
+      <div id="loginError" class="error" hidden></div>
+    </div>
+
+    <div id="dashboard" hidden>
+      <div class="topbar">
+        <span id="welcome"></span>
+        <button id="logout">Logout</button>
+      </div>
+
+      <section class="add-activity">
+        <h2>Add Activity</h2>
+        <form id="activityForm">
+          <input id="actName" placeholder="Activity name (e.g. Workshop)"/>
+          <input id="actPoints" type="number" placeholder="Points (e.g. 10)"/>
+          <select id="actStatus">
+            <option value="Planned">Planned</option>
+            <option value="Completed">Completed</option>
+          </select>
+          <button type="submit">Add</button>
+        </form>
+        <div id="formError" class="error" hidden></div>
+      </section>
+
+      <section class="controls">
+        <label>Filter
+          <select id="filterStatus">
+            <option value="All">All</option>
+            <option value="Completed">Completed</option>
+            <option value="Planned">Planned</option>
+          </select>
+        </label>
+        <label>Sort
+          <select id="sortBy">
+            <option value="name">Name</option>
+            <option value="points">Points</option>
+          </select>
+        </label>
+      </section>
+
+      <section>
+        <h2>Activities</h2>
+        <ul id="list"></ul>
+      </section>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

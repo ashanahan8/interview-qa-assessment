@@ -1,0 +1,14 @@
+{
+  "name": "qa-takehome-starter",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "http-server ./app -p 5173 -c-",
+    "test:e2e": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.4",
+    "http-server": "^14.1.1"
+  }
+}
