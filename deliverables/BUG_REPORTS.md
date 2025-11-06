@@ -1,7 +1,4 @@
 # Bug Reports
-
-(Log 3–5 issues here.)
-
 1 - New activity can't be deleted. 
 * add a new activity
 * click Delete button
